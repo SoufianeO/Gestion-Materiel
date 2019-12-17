@@ -1,0 +1,62 @@
+ <!-- Icon Cards-->
+   <div class="card mb-3">
+     <div class="card-header">
+        <i class="fas fa-desktop"></i>
+       Materiels</div>
+
+ <div class="card mb-3">
+     <div class="card-header">
+       <i class="fas fa-table"></i>
+       Data Table Example</div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+         <table *ngIf="materiels" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+           <thead>
+             <tr>
+               <th>Matricule</th>
+               <th>Type</th>
+               <th>Marque</th>
+               <th>Model</th>
+               <th>Date Aquisition</th>
+               <th>DateMettreEnService</th>
+               <th>Etat</th>
+               <th>Actions</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let materiel of materiels">
+
+               <td>{{materiel.matricule}}</td>
+               <td>{{materiel.type}}</td>
+               <td>{{materiel.marque}}</td>
+               <td>{{materiel.model}}</td>
+               <td>{{materiel.dateAcquisition}}</td>
+               <td>{{materiel.dateMettreEnService}}</td>
+               <td>{{materiel.etat}}</td>
+
+               <td>
+
+                 <a [routerLink]="['../editmaterialComponent', materiel.matricule]">
+                   <button type="button" class="btn btn-primary" data-toggle="modal">
+                     Modifier
+                   </button>
+                 </a>
+
+                 <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="delete(materiel.matricule)">
+                   Supprimer
+                   </button>
+
+               </td>
+
+
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="card-footer small text-muted">Updated Successfully</div>
+   </div>
+   </div>
+   <!-- /.container-fluid -->

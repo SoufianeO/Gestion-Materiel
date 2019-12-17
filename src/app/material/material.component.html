@@ -1,0 +1,84 @@
+
+          <!-- Icon Cards-->
+
+          <div class="card mb-3">
+            <div class="card-header">
+                <i class="fas fa-desktop"></i>
+              Material</div>
+          <div class="container">
+            <div class="card card-register mx-auto mt-12">
+              <div class="card-header">Ajouter Material </div>
+              <div class="card-body">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm" id="etat">
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <div class="form-label-group">
+                          <input type="text"  id="Matricule" class="form-control" placeholder="Matricule" required="required" autofocus="autofocus" name="matricule"ngModel>
+                          <label for="Matricule">Matricule</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-label-group">
+                          <input type="text"  id="Type" class="form-control" placeholder="Type" required="required" name="type" ngModel>
+                          <label for="Type">Type</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <div class="form-label-group">
+                          <input type="text"  id="Marque" class="form-control" placeholder="Marque" required="required" name="marque" ngModel>
+                          <label for="Marque">Marque</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-label-group">
+                          <input type="text"  id="Model" class="form-control" placeholder="Model" required="required" name="model" ngModel>
+                          <label for="Model">Model</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-label-group">
+                            <input type="date"  id="DateAcquisition" class="form-control" placeholder="DateAcquisition" required="required" name="dateAcquisition" ngModel>
+                            <label for="DateAcquisition">Date Acquisition</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-label-group">
+                            <input type="date" name="dateMettreEnService" id="MetteEnService" class="form-control" placeholder="MetteEnService" required="required" name="dateMettreEnService" ngModel>
+                            <label for="MetteEnService">Date de Mettre En Service</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-label-group">
+                            <select name="etat" class="form-control" id="inlineFormCustomSelect"  form="etat" ngModel="etat">
+                              <option value="marche">Marche</option>
+                              <option value="panne">En panne</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  <button class="btn btn-primary btn-block" type="submit">Ajouter</button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+          <!--       -->
+       </div>
+
+
+

@@ -1,0 +1,52 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><button routerLink="/InfoUserComponent" class="btn btn-link">User</button></li>
+  <li class="breadcrumb-item"><button routerLink="/InfofonctionnaireComponent" class="btn btn-link">Fonctionnaire</button></li>
+  <li class="breadcrumb-item"><button routerLink="/InfofournisseurComponent" class="btn btn-link">Fournisseur</button></li>
+
+</ol>
+  <!-- Icon Cards-->
+
+  <div class="card mb-3">
+    <div class="card-header">
+      <i class="fas fa-user"></i>
+       User</div>
+
+<div class="card mb-3">
+    <div class="card-header">
+      <i class="fas fa-table"></i>
+      Data Table Example</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <table *ngIf="users" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Matricule</th>
+            <th>Tél</th>
+            <th>Service</th>
+            <th>Site</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.nom}}</td>
+            <td>{{user.prenom}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.matricule}}</td>
+            <td>{{user.tel}}</td>
+            <td>{{user.service}}</td>
+            <td>{{user.site}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+  </div>
+  </div>
+
+      <!-- /.container-fluid -->

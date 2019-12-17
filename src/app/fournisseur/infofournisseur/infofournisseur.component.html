@@ -1,0 +1,51 @@
+
+     <!-- Breadcrumbs-->
+ <ol class="breadcrumb">
+    <li class="breadcrumb-item"><button routerLink="/InfoUserComponent" class="btn btn-link">User</button></li>
+    <li class="breadcrumb-item"><button routerLink="/InfofonctionnaireComponent" class="btn btn-link">Fonctionnaire</button></li>
+    <li class="breadcrumb-item"><button routerLink="/InfofournisseurComponent" class="btn btn-link">Fournisseur</button></li>
+
+  </ol>
+
+     <!-- Icon Cards-->
+
+     <div class="card mb-3">
+       <div class="card-header">
+         <i class="fas fa-user"></i>
+         Fournisseurs</div>
+
+       <div class="card mb-3">
+         <div class="card-header">
+           <i class="fas fa-table"></i>
+           Data Table Example</div>
+         <div class="card-body">
+           <div class="table-responsive">
+             <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+             <table *ngIf="fournisseurs" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+               <thead>
+               <tr>
+                 <th>matricule</th>
+                 <th>type</th>
+                 <th>marque</th>
+                 <th>model</th>
+                 <th>dateAquisition</th>
+                 <th>dateMettreEnService</th>
+                 <th>etat</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr *ngFor="let fournisseur of fournisseurs">
+                 <td>{{fournisseur.nom}}</td>
+                 <td>{{fournisseur.prenom}}</td>
+                 <td>{{fournisseur.email}}</td>
+                 <td>{{fournisseur.representat}}</td>
+               </tr>
+               </tbody>
+             </table>
+           </div>
+         </div>
+         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+       </div>
+     </div>
+     <!-- /.container-fluid -->
+

@@ -1,0 +1,44 @@
+<!-- Icon Cards-->
+
+   <div class="card mb-3">
+     <div class="card-header">
+        <i class="fas fa-wrench"></i>
+       Pannes</div>
+
+ <div class="card mb-3">
+     <div class="card-header">
+       <i class="fas fa-table"></i>
+       Data Table Example</div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+         <table *ngIf="pannes" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+           <thead>
+           <tr>
+             <th>Materiel</th>
+             <th>Fonctionnaire</th>
+             <th>date Acquisition</th>
+             <th>Délai de réponse</th>
+             <th>Délai de résolution</th>
+             <th>Description</th>
+             <th>Etat</th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr *ngFor="let panne of pannes">
+             <td>{{panne.idMateriel}}</td>
+             <td>{{panne.idFonctionnaire}}</td>
+             <td>{{panne.dateAcquisition}}</td>
+             <td>{{panne.delaiReponse}}</td>
+             <td>{{panne.delaiResolution}}</td>
+             <td>{{panne.description}}</td>
+             <td>{{panne.etat}}</td>
+           </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+   </div>
+   </div>
+    <!-- /.container-fluid -->

@@ -1,0 +1,41 @@
+ <!-- Icon Cards-->
+   <div class="card mb-3">
+     <div class="card-header">
+        <i class="fas fa-file-contract"></i>
+       Contra</div>
+
+ <div class="card mb-3">
+     <div class="card-header">
+       <i class="fas fa-table"></i>
+       Data Table Example</div>
+     <div class="card-body">
+       <div class="table-responsive">
+         <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+         <table *ngIf="contrats" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+           <thead>
+           <tr>
+             <th>Fournisseur</th>
+             <th>Materiel</th>
+             <th>date Acquisition</th>
+             <th>Délai de réponse</th>
+             <th>Délai de résolution</th>
+             <th>Fin Garantie</th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr *ngFor="let contrat of contrats">
+             <td>{{contrat.idFournisseur}}</td>
+             <td>{{contrat.idMateriel}}</td>
+             <td>{{contrat.dateAcquisition}}</td>
+             <td>{{contrat.delaiReponse}}</td>
+             <td>{{contrat.delaiResolution}}</td>
+             <td>{{contrat.dateFinGarantie}}</td>
+           </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+   </div>
+   </div>
+   <!-- /.container-fluid -->
