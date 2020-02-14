@@ -1,4 +1,6 @@
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class Materiel {
   matricule: string ;
   type: string ;
