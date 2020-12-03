@@ -23,6 +23,10 @@ import {HomeComponent} from './home';
 import {AdminComponent} from './admin';
 import {Materiel} from './_models/materiel';
 import { EditmaterialComponent } from './material/editmaterial/editmaterial.component';
+import { Contrat } from './_models/contrat';
+import { Fonctionnaire } from './_models/fonctionnaire';
+import { Fournisseur } from './_models/fournisseur';
+import { Panne } from './_models/panne';
 
 @NgModule({
   imports: [
@@ -56,7 +60,11 @@ import { EditmaterialComponent } from './material/editmaterial/editmaterial.comp
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     fakeBackendProvider,
-    Materiel
+    Contrat,
+    Fonctionnaire,
+    Fournisseur,
+    Materiel,
+    Panne
     ],
   bootstrap: [AppComponent]
 })

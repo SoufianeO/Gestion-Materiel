@@ -10,18 +10,22 @@
       <div class="card card-register mx-auto mt-12">
         <div class="card-header">Ajouter Panne </div>
         <div class="card-body">
-          <form>
+          <form [formGroup]="panneForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="IDfonctionnaire" class="form-control" placeholder="IDfonctionnaire" required="required" autofocus="autofocus">
+                    <input type="text" id="idPanne" class="form-control" placeholder="ID Panne" required="required" autofocus="autofocus" formControlName="idPanne">
+                    <label for="idPanne">ID Panne</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="text" id="IDfonctionnaire" class="form-control" placeholder="IDfonctionnaire" required="required" autofocus="autofocus" formControlName="idFonctionnaire">
                     <label for="IDfonctionnaire">IDfonctionnaire</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="IDmateriel" class="form-control" placeholder="IDmateriel" required="required">
+                    <input type="text" id="IDmateriel" class="form-control" placeholder="IDmateriel" required="required" formControlName="idMateriel">
                     <label for="IDmateriel">IDmateriel</label>
                   </div>
                 </div>
@@ -31,13 +35,13 @@
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="date" id="DelaiReponse" class="form-control" placeholder="DelaiReponse" required="required">
+                    <input type="number" id="DelaiReponse" class="form-control" placeholder="DelaiReponse" required="required" formControlName="delaiReponse">
                     <label for="DelaiReponse">Délai De Réponse</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="date" id="DateAcquisition" class="form-control" placeholder="DateAcquisition" required="required">
+                    <input type="date" id="DateAcquisition" class="form-control" placeholder="DateAcquisition" required="required" formControlName="dateAcquisition">
                     <label for="DateAcquisition">Date d'Acquisition</label>
                   </div>
                 </div>
@@ -47,14 +51,14 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-label-group">
-                          <input type="date" id="DelaiResolution" class="form-control" placeholder="DelaiResolution" required="required">
+                          <input type="date" id="DelaiResolution" class="form-control" placeholder="DelaiResolution" required="required" formControlName="delaiResolution">
                           <label for="DelaiResolution">Delai de Résolution</label>
                         </div>
                       </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
 
-                      <select class="form-control" id="inlineFormCustomSelect">
+                      <select name="etat" class="form-control" id="inlineFormCustomSelect" formControlName="etat">
                         <option value="Reglee">Réglée</option>
                         <option value="non reglee">non réglée</option>
                       </select>
@@ -66,16 +70,12 @@
               </div>
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="Description" class="form-control" placeholder="Description" required="required">
+                  <input type="text" id="Description" class="form-control" placeholder="Description" required="required" formControlName="description">
                   <label for="Description">Description</label>
                 </div>
               </div>
-
-
-
-            <a class="btn btn-primary btn-block" href="login.html">Ajouter</a>
+            <button class="btn btn-primary btn-block" type="submit" [disabled]="!panneForm.valid">Ajouter</button>
           </form>
-
         </div>
       </div>
     </div>
