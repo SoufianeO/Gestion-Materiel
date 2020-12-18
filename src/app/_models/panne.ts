@@ -1,10 +1,11 @@
 export class Panne {
-
+  numeroDemande: string;
+  dateDeclaration: string;
+  delaiReponse: string;
+  delaiResolution: string;
+  description: string;
+  etat: string;
+  //
   idFonctionnaire: string;
   idMateriel: string;
-  delaiReponse: string;
-  dateAcquisition: string;
-  delaiResolution: string;
-  etat: string;
-  description: string;
 }

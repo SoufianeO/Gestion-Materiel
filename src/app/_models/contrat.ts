@@ -1,10 +1,11 @@
 export class Contrat {
 
-  id: string;
+  idContrat: string;
+  dateAcquisition: string;
+  delaiReponse: string;
+  delaiResolution: string;
+  dateFinGarantie: string;
+  //
   idFournisseur: string;
   idMateriel: string;
-  delaiReponse: string;
-  dateAcquisition: string;
-  dateFinGarantie: string;
-  delaiResolution: string;
 }
