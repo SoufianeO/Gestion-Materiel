@@ -10,22 +10,22 @@
       <div class="card card-register mx-auto mt-12">
         <div class="card-header">Ajouter Panne </div>
         <div class="card-body">
-          <form [formGroup]="panneForm" (ngSubmit)="onSubmit()">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
             <div class="form-group">
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="idPanne" class="form-control" placeholder="ID Panne" required="required" autofocus="autofocus" formControlName="idPanne">
+                    <input type="text" id="idPanne" class="form-control" placeholder="ID Panne" required="required" autofocus="autofocus" name="idPanne" ngModel>
                     <label for="idPanne">ID Panne</label>
                   </div>
                   <div class="form-label-group">
-                    <input type="text" id="IDfonctionnaire" class="form-control" placeholder="IDfonctionnaire" required="required" autofocus="autofocus" formControlName="idFonctionnaire">
+                    <input type="text" id="IDfonctionnaire" class="form-control" placeholder="IDfonctionnaire" required="required" autofocus="autofocus" name="idFonctionnaire" ngModel>
                     <label for="IDfonctionnaire">IDfonctionnaire</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="text" id="IDmateriel" class="form-control" placeholder="IDmateriel" required="required" formControlName="idMateriel">
+                    <input type="text" id="IDmateriel" class="form-control" placeholder="IDmateriel" required="required" name="idMateriel" ngModel>
                     <label for="IDmateriel">IDmateriel</label>
                   </div>
                 </div>
@@ -35,14 +35,14 @@
               <div class="form-row">
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="number" id="DelaiReponse" class="form-control" placeholder="DelaiReponse" required="required" formControlName="delaiReponse">
+                    <input type="number" id="DelaiReponse" class="form-control" placeholder="DelaiReponse" required="required" name="delaiReponse" ngModel>
                     <label for="DelaiReponse">Délai De Réponse</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="date" id="DateAcquisition" class="form-control" placeholder="DateAcquisition" required="required" formControlName="dateAcquisition">
-                    <label for="DateAcquisition">Date d'Acquisition</label>
+                    <input type="date" id="DateDeclaration" class="form-control" placeholder="DateDeclaration" required="required" name="dateDeclaration" ngModel>
+                    <label for="DateDeclaration">Date Déclaration</label>
                   </div>
                 </div>
               </div>
@@ -51,14 +51,14 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-label-group">
-                          <input type="date" id="DelaiResolution" class="form-control" placeholder="DelaiResolution" required="required" formControlName="delaiResolution">
+                          <input type="number" id="DelaiResolution" class="form-control" placeholder="DelaiResolution" required="required" name="delaiResolution" ngModel> 
                           <label for="DelaiResolution">Delai de Résolution</label>
                         </div>
                       </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
 
-                      <select name="etat" class="form-control" id="inlineFormCustomSelect" formControlName="etat">
+                      <select name="etat" class="form-control" id="Etat" name="etat" ngModel>
                         <option value="Reglee">Réglée</option>
                         <option value="non reglee">non réglée</option>
                       </select>
@@ -70,11 +70,11 @@
               </div>
               <div class="form-group">
                 <div class="form-label-group">
-                  <input type="text" id="Description" class="form-control" placeholder="Description" required="required" formControlName="description">
+                  <input type="text" id="Description" class="form-control" placeholder="Description" required="required" name="description" ngModel>
                   <label for="Description">Description</label>
                 </div>
               </div>
-            <button class="btn btn-primary btn-block" type="submit" [disabled]="!panneForm.valid">Ajouter</button>
+            <button class="btn btn-primary btn-block" type="submit">Ajouter</button>
           </form>
         </div>
       </div>

@@ -7,7 +7,7 @@
             <div class="card card-register mx-auto mt-12">
               <div class="card-header">Ajouter Material </div>
               <div class="card-body">
-                <form (ngSubmit)="onSubmit(f)" #f="ngForm" id="etat">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col-md-6">
@@ -60,7 +60,7 @@
                       <div class="form-row">
                         <div class="col-md-6">
                           <div class="form-label-group">
-                            <select name="etat" class="form-control" id="inlineFormCustomSelect"  form="etat" ngModel="etat">
+                            <select name="etat" class="form-control" id="Etat"  form="etat" ngModel="etat">
                               <option value="marche">Marche</option>
                               <option value="panne">En panne</option>
                             </select>
@@ -77,4 +77,3 @@
           </div>
           <!--       -->
        </div>
-

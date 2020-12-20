@@ -1,5 +1,5 @@
 export class Panne {
-  numeroDemande: string;
+  idPanne: string;
   dateDeclaration: string;
   delaiReponse: string;
   delaiResolution: string;

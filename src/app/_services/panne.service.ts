@@ -13,13 +13,18 @@ export class PanneService {
     return this.http.get<Panne[]>(`http://localhost:8080/panne/pannes`);
   }
 
-  getById(id: string): Observable<Panne> {
-    return this.http.get<Panne>(`http://localhost:8080/panne/pannes/${id}`);
+  getById(idPanne: string): Observable<Panne> {
+    return this.http.get<Panne>(`http://localhost:8080/panne/pannes/${idPanne}`);
   }
 
   addPanne(panne: Panne) {
-    console.log("inside Panne");
     this.http.post(`http://localhost:8080/panne/pannes`, panne).subscribe(res => console.log('addPanne done'));
+  }
+  deletePanne(idPanne: string) {
+    this.http.delete(`http://localhost:8080/panne/pannes/${idPanne}`).subscribe(res => console.log('deletePanne done'));
+  }
+  updatePanne(idPanne: string , panne: Panne) {
+    this.http.put(`http://localhost:8080/panne/pannes/${idPanne}`, panne).subscribe(res => console.log('updatePanne done'));
   }
 
 }

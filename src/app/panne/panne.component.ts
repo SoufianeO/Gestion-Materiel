@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Panne } from '../_models/panne';
 import { PanneService } from '../_services/panne.service';
@@ -10,30 +10,18 @@ import { PanneService } from '../_services/panne.service';
   styleUrls: ['./panne.component.css']
 })
 export class PanneComponent implements OnInit {
-  loading: boolean;
-  constructor(private fb:FormBuilder,private router: Router, private panneService: PanneService, private panne: Panne) {
+  loading=false;
+  constructor(private router: Router, private panneService: PanneService, private panne: Panne) {
    }
-
-  panneForm = this.fb.group({
-    idPanne: ['', Validators.required],
-    idFonctionnaire: ['', Validators.required],
-    idMateriel: ['', Validators.required],
-    delaiReponse: [''],
-    dateAcquisition: [''],
-    delaiResolution: [''],
-    etat: [''],
-    description: ['']
-  });
   
   ngOnInit() {
   }
-  onSubmit() {
+  onSubmit(form: NgForm) {
     this.loading=true;
-    this.panne=this.panneForm.value;
-    console.warn(this.panneForm.value);
+    console.log(form.value);
+    this.panne=form.value;
     this.panneService.addPanne(this.panne);
     this.router.navigate(['InfopanneComponent']);
     this.loading = false;
   }
-
 }

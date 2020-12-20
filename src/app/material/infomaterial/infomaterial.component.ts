@@ -24,10 +24,10 @@ export class InfomaterialComponent implements OnInit {
     });
   }
 
-  delete(matricule: string) {
+  delete(idMatricule: string) {
 
     this.loading = true;
-    this.materielservice.deleteMateriel(matricule);
+    this.materielservice.deleteMateriel(idMatricule);
     this.router.navigate(['MaterialComponent']);
     this.loading = false;
   }
