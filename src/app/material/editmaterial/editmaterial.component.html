@@ -1,6 +1,4 @@
-
 <!-- Icon Cards-->
-
   <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-desktop"></i>
@@ -14,13 +12,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text"  id="Matricule" name="matricule" class="form-control" placeholder="Matricule" required="required" form="Matricule" readonly autofocus="autofocus"  [ngModel]="materiel.matricule"  >
-                  <label for="Matricule">Matricule</label>
+                  <input type="text"  id="ID Materiel" name="idMateriel" class="form-control" placeholder="IDMateriel" required="required" form="IDMateriel" readonly autofocus="autofocus"  [(ngModel)]="materiel.idMateriel">
+                  <label for="ID Materiel">ID Materiel</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text"  id="Type" name="type" class="form-control" placeholder="Type" required="required" form="Type"  [ngModel]="materiel.type"  >
+                  <input type="text"  id="Type" name="type" class="form-control" placeholder="Type" required="required" form="Type"  [(ngModel)]="materiel.type">
                   <label for="Type">Type</label>
                 </div>
               </div>
@@ -30,13 +28,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text"  id="Marque" name="marque" class="form-control" placeholder="Marque" required="required" form="Marque" [ngModel]="materiel.marque"  >
+                  <input type="text"  id="Marque" name="marque" class="form-control" placeholder="Marque" required="required" form="Marque" [(ngModel)]="materiel.marque">
                   <label for="Marque">Marque</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text"  id="Model" name="model" class="form-control" placeholder="Model" required="required" form="Model" [ngModel]="materiel.model" >
+                  <input type="text"  id="Model" name="model" class="form-control" placeholder="Model" required="required" form="Model" [(ngModel)]="materiel.model">
                   <label for="Model">Model</label>
                 </div>
               </div>
@@ -46,13 +44,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="date"  id="DateAcquisition" name="dateAcquisition" class="form-control" placeholder="DateAcquisition" required="required" form="DateAcquisition" [ngModel]="materiel.dateAcquisition" >
+                  <input type="date"  id="DateAcquisition" name="dateAcquisition" class="form-control" placeholder="DateAcquisition" required="required" form="DateAcquisition" [(ngModel)]="materiel.dateAcquisition">
                   <label for="DateAcquisition">Date Acquisition</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="date"  id="MetteEnService" name="dateMettreEnService" class="form-control" placeholder="MetteEnService" required="required" form="MetteEnService"  [ngModel]="materiel.dateMettreEnService"  >
+                  <input type="date"  id="MetteEnService" name="dateMettreEnService" class="form-control" placeholder="MetteEnService" required="required" form="MetteEnService"  [(ngModel)]="materiel.dateMettreEnService">
                   <label for="MetteEnService">Date de Mettre En Service</label>
                 </div>
               </div>
@@ -62,7 +60,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <select name="etat" class="form-control" id="inlineFormCustomSelect"  form="etat" [ngModel]="materiel.etat">
+                  <select name="etat" class="form-control" id="inlineFormCustomSelect"  form="etat" [(ngModel)]="materiel.etat">
                     <option value="marche">Marche</option>
                     <option value="panne">En panne</option>
                   </select>
@@ -70,10 +68,8 @@
               </div>
             </div>
           </div>
-
           <button class="btn btn-primary btn-block" type="submit">Modifier</button>
         </form>
-
       </div>
     </div>
   </div>

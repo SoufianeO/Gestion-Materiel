@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'InfoUserComponent', component: InfoUserComponent, canActivate: [AuthGuard]},
   {path: 'InfofonctionnaireComponent', component: InfofonctionnaireComponent},
   {path: 'InfofournisseurComponent', component: InfofournisseurComponent, canActivate: [AuthGuard]},
-  {path: 'editmaterialComponent/:matricule', component: EditmaterialComponent, canActivate: [AuthGuard]},
+  {path: 'editmaterialComponent/:idMateriel', component: EditmaterialComponent, canActivate: [AuthGuard]},
   {path: 'InfomaterialComponent', component: InfomaterialComponent, canActivate: [AuthGuard]},
   {path: 'ContraComponent', component: ContraComponent, canActivate: [AuthGuard]},
   {path: 'InfocontraComponent', component: InfocontraComponent, canActivate: [AuthGuard]},

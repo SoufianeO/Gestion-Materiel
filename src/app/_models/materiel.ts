@@ -1,5 +1,5 @@
 export class Materiel {
-  matricule: string;
+  idMateriel: string;
   type: string;
   marque: string;
   model: string;

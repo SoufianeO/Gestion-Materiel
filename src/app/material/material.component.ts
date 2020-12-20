@@ -21,6 +21,7 @@ export class MaterialComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.loading = true;
+    console.log(form.value);
     this.materiel = form.value;
     this.materielservice.addMateriel(this.materiel);
     this.router.navigate(['InfomaterialComponent']);

@@ -1,7 +1,10 @@
 ﻿import { Role } from './role';
 
 export class User {
-  idFonctionnaire: string;
+  username: string;
+  password: string;
+  //
+  id: number;
   email: string;
   nom: string;
   prenom: string;

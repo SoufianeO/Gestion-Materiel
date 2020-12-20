@@ -3,7 +3,7 @@
      <div class="card-header">
         <i class="fas fa-desktop"></i>
        Materiels</div>
-
+       
  <div class="card mb-3">
      <div class="card-header">
        <i class="fas fa-table"></i>
@@ -14,7 +14,7 @@
          <table *ngIf="materiels" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
            <thead>
              <tr>
-               <th>Matricule</th>
+               <th>ID Materiel</th>
                <th>Type</th>
                <th>Marque</th>
                <th>Model</th>
@@ -27,29 +27,27 @@
            <tbody>
              <tr *ngFor="let materiel of materiels">
 
-               <td>{{materiel.matricule}}</td>
+               <td>{{materiel.idMateriel}}</td>
                <td>{{materiel.type}}</td>
                <td>{{materiel.marque}}</td>
                <td>{{materiel.model}}</td>
                <td>{{materiel.dateAcquisition}}</td>
                <td>{{materiel.dateMettreEnService}}</td>
                <td>{{materiel.etat}}</td>
-
                <td>
 
-                 <a [routerLink]="['../editmaterialComponent', materiel.matricule]">
+                 <a [routerLink]="['../editmaterialComponent', materiel.idMateriel]">
                    <button type="button" class="btn btn-primary" data-toggle="modal">
                      Modifier
                    </button>
                  </a>
 
                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="delete(materiel.matricule)">
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="delete(materiel.idMateriel)">
                    Supprimer
                    </button>
 
                </td>
-
 
              </tr>
            </tbody>

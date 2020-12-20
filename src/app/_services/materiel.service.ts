@@ -13,19 +13,19 @@ export class MaterielService {
     return this.http.get<Materiel[]>(`http://localhost:8080/materiel/materiels`);
   }
 
-  getById(id: string): Observable<Materiel> {
-    return this.http.get<Materiel>(`http://localhost:8080/materiel/materiels/${id}`);
+  getById(idMateriel: string): Observable<Materiel> {
+    return this.http.get<Materiel>(`http://localhost:8080/materiel/materiels/${idMateriel}`);
   }
 
   addMateriel(materiel: Materiel) {
-    this.http.post(`http://localhost:8080/materiel/materiels`, materiel).subscribe(res => console.log('done'));
+    this.http.post(`http://localhost:8080/materiel/materiels`, materiel).subscribe(res => console.log('addMateriel done'));
   }
 
-  deleteMateriel(matricule: string) {
-    this.http.delete(`http://localhost:8080/materiel/materiels/${matricule}`).subscribe(res => console.log('deleted'));
+  deleteMateriel(idMateriel: string) {
+    this.http.delete(`http://localhost:8080/materiel/materiels/${idMateriel}`).subscribe(res => console.log('deleteMateriel done'));
   }
-  updateMateriel(matricule: string , materiel: Materiel) {
-    this.http.put(`http://localhost:8080/materiel/materiels/${matricule}`, materiel).subscribe(res => console.log('done'));
+  updateMateriel(idMateriel: string , materiel: Materiel) {
+    this.http.put(`http://localhost:8080/materiel/materiels/${idMateriel}`, materiel).subscribe(res => console.log('updateMateriel done'));
   }
 
 }
